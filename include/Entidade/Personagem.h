@@ -1,10 +1,13 @@
 #pragma once
 #include "Entidade.h"
 
-class Personagem : public Entidade
+namespace Personagens
 {
-    protected:
-    public:
-        Personagem();
-        ~Personagem();
-};
+    class Personagem : public Entidade::Entidade
+    {
+        protected:
+        public:
+            Personagem();
+            ~Personagem();
+    };
+}

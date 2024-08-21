@@ -1,11 +1,11 @@
 #include "../../include/Entidade/Personagem.h"
 
-Personagem::Personagem()
+Personagens::Personagem::Personagem()
 {
 
 }
 
-Personagem::~Personagem()
+Personagens::Personagem::~Personagem()
 {
     
 }

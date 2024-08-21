@@ -13,21 +13,18 @@ Jogo::~Jogo()
 void Jogo::executar()
 {
     Gerenciador::GerenciadorGrafico* pGGrafico = Gerenciador::GerenciadorGrafico::getGerenciadorGrafico();
+    Gerenciador::GerenciadorEvento* pGEvento = Gerenciador::GerenciadorEvento::getGerenciadorEventos();
+    pGEvento->setGerenciadosGrafico(pGGrafico);
     Jogador* jog = new Jogador();
+    pGEvento->setJogador(jog);
 
     while(pGGrafico->verificarJanelaAberta())
     {
         sf::Event evento;
-        while(pGGrafico->getJanela()->pollEvent(evento))
-        {
-            if(evento.type == sf::Event::Closed)
-            {
-                pGGrafico->fecharJanela();
-            }
-
+                    
+        pGEvento->executar(evento);
         pGGrafico->limpaJanela();
         pGGrafico->desenhaEntidade(jog->getCorpo());
         pGGrafico->monstraEntidade();
-        }
     }
 }

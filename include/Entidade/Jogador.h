@@ -2,11 +2,17 @@
 
 #include "Personagem.h"
 
-class Jogador : public Personagem
+namespace Personagens
 {
-    private:
-    public:
-        Jogador();
-        ~Jogador();
-        sf::RectangleShape getCorpo();
-};
+    class Jogador : public Personagem
+    {
+        private:
+        public:
+            Jogador();
+            ~Jogador();
+            const sf::RectangleShape getCorpo();
+            void andaPraDireita();
+            void andaPraEsquerda();
+    };
+    
+}

@@ -1,11 +1,14 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 
-class Entidade
+namespace Entidade 
 {
-    protected:
-        sf::RectangleShape corpo;
-    public:
-    Entidade();
-    ~Entidade();
-};
+    class Entidade
+    {
+        protected:
+          sf::RectangleShape corpo;
+        public:
+         Entidade();
+        ~Entidade();
+    };
+}
