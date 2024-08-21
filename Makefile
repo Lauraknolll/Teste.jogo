@@ -1,4 +1,19 @@
-build: compile
-	g++ main.o -o main -L "C:\Users\samsu\OneDrive\Documentos\SFML-2.6.1\lib" -lsfml-graphics -lsfml-window -lsfml-system
+all: compile link execute
+
 compile:
-	g++ -c main.cpp -I "C:\Users\samsu\OneDrive\Documentos\SFML-2.6.1\include" 
+	g++ -c main.cpp src/Entidade/*.cpp src/Gerenciador/*.cpp src/*.cpp -I "C:\Users\samsu\OneDrive\Documentos\SFML-2.6.1\include"
+
+link:
+	g++ *.o -Wall -o main -L "C:\Users\samsu\OneDrive\Documentos\SFML-2.6.1\lib" -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system
+
+execute: 
+	./main
+	cls
+
+clear-windows:
+	del *.o
+	cls
+
+clear-linux:
+	rm -rf *.o
+	clear
