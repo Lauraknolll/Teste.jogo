@@ -4,6 +4,7 @@
 #include "Gerenciador/GerenciadorEventos.h"
 #include "Entidade/Personagens/Jogador.h"
 #include "Entidade/Personagens/InimigoFacil.h"
+#include "Listas/ListaEntidades.h"
 
 class Jogo
 {

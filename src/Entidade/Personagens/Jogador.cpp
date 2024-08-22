@@ -29,5 +29,5 @@ void Personagens::Jogador::andaPraEsquerda()
 
 void Personagens::Jogador::executar()
 {
-
+    corpo.setFillColor(sf::Color::Magenta);
 }
