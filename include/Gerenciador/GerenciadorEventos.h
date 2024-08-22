@@ -1,7 +1,7 @@
 #pragma once
 
 #include "GerenciadorGrafico.h"
-#include "../Entidade/Jogador.h"
+#include "../Entidade/Personagens/Jogador.h"
 
 using namespace Personagens;
 

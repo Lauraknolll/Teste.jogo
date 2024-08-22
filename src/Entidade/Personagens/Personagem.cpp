@@ -1,6 +1,7 @@
-#include "../../include/Entidade/Personagem.h"
+#include "../../../include/Entidade/Personagens/Personagem.h"
 
-Personagens::Personagem::Personagem()
+Personagens::Personagem::Personagem() :
+    Entidade()
 {
 
 }

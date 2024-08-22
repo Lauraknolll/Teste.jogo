@@ -1,6 +1,7 @@
-#include "../../include/Entidade/Inimigo.h"
+#include "../../../include/Entidade/Personagens/Inimigo.h"
 
-Personagens::Inimigo::Inimigo()
+Personagens::Inimigo::Inimigo() :
+    Personagem()
 {
 
 }

@@ -17,6 +17,8 @@ void Jogo::executar()
     pGEvento->setGerenciadosGrafico(pGGrafico);
     Jogador* jog = new Jogador();
     pGEvento->setJogador(jog);
+    InimigoFacil* ini = new InimigoFacil();
+
 
     while(pGGrafico->verificarJanelaAberta())
     {
@@ -24,7 +26,9 @@ void Jogo::executar()
                     
         pGEvento->executar(evento);
         pGGrafico->limpaJanela();
+        ini->executar();
         pGGrafico->desenhaEntidade(jog->getCorpo());
+        pGGrafico->desenhaEntidade(ini->getCorpo());
         pGGrafico->monstraEntidade();
     }
 }

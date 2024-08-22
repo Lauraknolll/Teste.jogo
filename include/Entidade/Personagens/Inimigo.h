@@ -4,11 +4,13 @@
 
 namespace Personagens
 {
-    class Inimigo
+    class Inimigo : public Personagem
     {
         protected:
+            sf::Clock relogio;
         public:
             Inimigo();
-         ~Inimigo();
+            ~Inimigo();
+            virtual void executar() = 0;
     };
 }

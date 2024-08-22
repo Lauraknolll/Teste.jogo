@@ -11,6 +11,7 @@ namespace Personagens
             Jogador();
             ~Jogador();
             const sf::RectangleShape getCorpo();
+            void executar();
             void andaPraDireita();
             void andaPraEsquerda();
     };

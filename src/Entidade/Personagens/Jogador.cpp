@@ -1,8 +1,10 @@
-#include "../../include/Entidade/Jogador.h"
+#include "../../../include/Entidade/Personagens/Jogador.h"
 
-Personagens::Jogador::Jogador()
+Personagens::Jogador::Jogador() :
+    Personagem()
 {
-
+    corpo.setFillColor(sf::Color::Blue);
+    corpo.setOrigin(sf::Vector2f(-100.0f, -400.0f));
 }
 
 Personagens::Jogador::~Jogador()
@@ -23,4 +25,9 @@ void Personagens::Jogador::andaPraDireita()
 void Personagens::Jogador::andaPraEsquerda()
 {
     corpo.move(sf::Vector2f(-1.0f, 0.0f));
+}
+
+void Personagens::Jogador::executar()
+{
+
 }

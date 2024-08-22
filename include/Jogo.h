@@ -2,7 +2,8 @@
 
 #include "Gerenciador/GerenciadorGrafico.h"
 #include "Gerenciador/GerenciadorEventos.h"
-#include "Entidade/Jogador.h"
+#include "Entidade/Personagens/Jogador.h"
+#include "Entidade/Personagens/InimigoFacil.h"
 
 class Jogo
 {
