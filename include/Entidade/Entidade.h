@@ -1,9 +1,11 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 
+#include "../Ente.h"
+
 namespace Entidade 
 {
-    class Entidade
+    class Entidade : public Ente
     {
         protected:
           float x;
