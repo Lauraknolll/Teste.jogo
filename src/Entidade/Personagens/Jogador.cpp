@@ -19,12 +19,12 @@ const sf::RectangleShape Personagens::Jogador::getCorpo()
 
 void Personagens::Jogador::andaPraDireita()
 {
-    corpo.move(sf::Vector2f(1.0f, 0.0f));
+    corpo.move(sf::Vector2f(2.0f, 0.0f));
 }
 
 void Personagens::Jogador::andaPraEsquerda()
 {
-    corpo.move(sf::Vector2f(-1.0f, 0.0f));
+    corpo.move(sf::Vector2f(-2.0f, 0.0f));
 }
 
 void Personagens::Jogador::executar()

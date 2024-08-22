@@ -1,7 +1,7 @@
 #include "../../include/Entidade/Entidade.h"
 
 Entidade::Entidade::Entidade() :
-    corpo(sf::Vector2f(100.f, 100.f)), id(0)
+    corpo(sf::Vector2f(50.f, 50.f)), id(0), velocidade(sf::Vector2f(0.01f, 0.0f))
 {
 
 }

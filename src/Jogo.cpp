@@ -19,13 +19,17 @@ void Jogo::executar()
     pGEvento->setGerenciadosGrafico(pGGrafico);
     Jogador* jog = new Jogador();
     pGEvento->setJogador(jog);
-    InimigoFacil* ini = new InimigoFacil();
+    InimigoFacil* ini1 = new InimigoFacil();
+    InimigoMedio* ini2 = new InimigoMedio();
+    ini2->setJogador(jog);
 
     Entidade::Entidade* e1 = static_cast<Entidade::Entidade*>(jog);
-    Entidade::Entidade* e2 = static_cast<Entidade::Entidade*>(ini);
+    Entidade::Entidade* e2 = static_cast<Entidade::Entidade*>(ini1);
+    Entidade::Entidade* e3 = static_cast<Entidade::Entidade*>(ini2);
 
     ListaEntidades.adicionaEntidade(e1);
     ListaEntidades.adicionaEntidade(e2);
+    ListaEntidades.adicionaEntidade(e3);
     
     while(pGGrafico->verificarJanelaAberta())
     {
@@ -36,7 +40,8 @@ void Jogo::executar()
         ListaEntidades.percorrer();
         //ini->executar();
         pGGrafico->desenhaEntidade(jog->getCorpo());
-        pGGrafico->desenhaEntidade(ini->getCorpo());
+        pGGrafico->desenhaEntidade(ini1->getCorpo());
+        pGGrafico->desenhaEntidade(ini2->getCorpo());
         pGGrafico->monstraEntidade();
     }
 }

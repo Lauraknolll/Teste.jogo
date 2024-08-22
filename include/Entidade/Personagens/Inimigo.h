@@ -2,6 +2,8 @@
 
 #include "Personagem.h"
 
+#include <cmath>
+
 namespace Personagens
 {
     class Inimigo : public Personagem
